@@ -1,0 +1,34 @@
+<h2>My Heroes</h2>
+
+<div [ngStyle]="currentStyles">
+	This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
+<p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>
+
+<p><span [innerHTML]="number1 + number2"></span> is the <i>property bound</i> title.</p>
+<p><span>{{number1 + number2}}</span> is the <i>interpolated</i> title.</p>
+<button [disabled]="isDisable" >interpolated</button>
+<button disabled="{{isDisable}}" >property bound</button>
+
+<!-- create and set an aria attribute for assistive technology -->
+<button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+
+<!-- toggle the "special" class on/off with a property -->
+<div [class.special]="isDisable">The class binding is special</div>
+
+<!-- binding to `class.special` trumps the class attribute -->
+<div class="special"
+     [class.special]="!isDisable">This one is not so special</div>
+	 
+<ul class="heroes">
+	<li *ngFor="let hero of heroes"
+		class="hihi"
+		[class.selected]="hero === selectedHero"
+		(click)="onSelect(hero)">
+		<span class="badge">{{hero.id}}</span> {{hero.name}}
+	</li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
