@@ -1,0 +1,9 @@
+public/js/vendor/*.js
+public/js/plugins.js
+public/**/*.min.js
+public/js/site/ScrollChecker.js
+public/360/**/*
+public/draft
+node_modules/**/*
+keystone/
+_draft-models
