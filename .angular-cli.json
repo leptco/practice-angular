@@ -5,6 +5,7 @@
   },
   "apps": [
     {
+<<<<<<< HEAD
 		"root": "src",
 		"outDir": "dist",
 		"assets": [

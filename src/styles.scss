@@ -1,10 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'global';
-@import 'variables';
-@import 'mixins';
-
-h1 {
-	font-size: $font-size;
-	color: $red;
-	background: #090902;
-}

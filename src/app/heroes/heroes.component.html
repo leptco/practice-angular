@@ -1,0 +1,40 @@
+<h2>My Heroes</h2>
+
+<div [ngStyle]="currentStyles">
+	This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<!-- <p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
+<p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p> -->
+
+<!-- <p><span [innerHTML]="number1 + number2"></span> is the <i>property bound</i> title.</p>
+<p><span>{{number1 + number2}}</span> is the <i>interpolated</i> title.</p>
+<button [disabled]="isDisable" >interpolated</button>
+<button disabled="{{isDisable}}" >property bound</button>
+
+<button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+
+<div [class.special]="isDisable">The class binding is special</div>
+
+<div class="special"
+     [class.special]="!isDisable">This one is not so special</div> -->
+<div>
+	<label>Hero name:
+		<input #heroName />
+	</label>
+	<button (click)="add(heroName.value); heroName.value=''">
+		add
+	</button>
+</div>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+	<li *ngFor="let hero of heroes">
+		<a routerLink="/detail/{{hero.id}}">
+			<span class="badge">{{hero.id}}</span> {{hero.name}}
+		</a>
+		<button class="delete" title="delete hero"
+			(click)="delete(hero)">x</button>
+	</li>
+</ul>
+
